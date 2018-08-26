@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Endangered Species</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <form id="new-animal-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="commonname" class="primary">Common Name</label>
+          <input type="text" id="commonname" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="scientificname" class="primary">Scientific Name</label>
+          <input type="text" id="scientificname" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="category" class="primary">Endangered Category</label>
+          <select id="category">
+            <option value="" disabled selected></option>
+            <option value="Vulnerable">Vulnerable</option>
+            <option value="Endangered">Endangered</option>
+            <option value="Critically-endangered">Critically-endangered</option>
+          </select>
+        </div>
+
+
+        <fieldset>
+                <legend>Select main threat</legend>
+
+                    <input type="radio" id="habitat" name="threat" value="Habitat Destruction" checked />
+                    <label for="habitat">Habitat Destruction</label>
+
+                    <input type="radio" id="invasive" name="threat" value="Invasive Species" />
+                    <label for="invasive">Invasive Species</label>
+
+                    <input type="radio" id="hunting" name="threat" value="Hunting" />
+                    <label for="hunting">Hunting</label>
+
+        </fieldset>
+
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+    <h1>Endangered List</h1>
+    <div id="endangered-list"></div>
+  </body>
+
+  <!-- button delete all -->
+   <button type="button" id="delete-button">Delete All</button>
+
+   <!-- form delete all -->
+  <!-- <form class="delete" action="index.html" method="post">
+    <input type="submit" value="Delete all"/>
+  </form> -->
+
+</html>
